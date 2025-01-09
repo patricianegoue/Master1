@@ -1,0 +1,62 @@
+/*
+ * listeChaine.c
+ *
+ *  Created on: Dec 28, 2012
+ *      Author: messi
+ */
+#include <stdlib.h>
+#include "listeChaine.h"
+#include <stdio.h>
+
+
+Noeud* nouveau(int val)
+{
+  	Noeud* noeud = (Noeud*)malloc(sizeof(Noeud));
+  	noeud->info = val;
+  	noeud->suivant = 0;
+    return noeud;
+}
+
+void insert_tete(Noeud** liste, int val)
+{
+	Noeud* l = nouveau(val);
+	l->suivant = *liste;
+	*liste = l;
+}
+void inverse_liste(Noeud**liste)
+{
+	Noeud* l = 0;
+	Noeud* q = *liste;
+	Noeud* p;
+	while(q!=0){
+		insert_tete(&l,q->info);
+		p = q;
+		q = q->suivant;
+		free(p);
+	}
+	*liste = l;
+
+}
+void insert_queue(Noeud** liste, int val)
+{
+
+}
+void supprime_tete(Noeud ** liste)
+{
+	Noeud* l = *liste;
+	*liste = (*liste)->suivant;
+	free(l);
+}
+
+void affiche(Noeud * liste)
+{
+	Noeud * l = liste;
+	printf("\n");
+
+	while(l!=0){
+		printf("%d",l->info);
+		l = l->suivant;
+	}
+
+	printf("\n");
+}

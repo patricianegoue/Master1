@@ -1,0 +1,80 @@
+EXplications
+
+1. Etant donné que le patron abstract factory permet la création des object organisés en famille, Nous avons donc établie deux familles de véhicule a savoir:
+	- Les véhicules électriques
+	- les véhicules à éssence
+En considérant les deux exemples objets du domaine à créer (automobiles, scooter) et les 2 familles d'objets, on a deux fabrique concrètes: 
+	- Une pour la création des véhicules a éssence (automobile a éssence, scooter à éssence)
+	- Une pour la création des véhicules électriques (automobile électrique, scooter électrique)
+	
+	Modélidation
+	.........
+	
+	
+2. La liasse est constituée de 3 documents (demande d'immatriculation, certificat de cession, bon de commande). En appliquant le patron Builder, on construit la liasse en 3 étapes:
+	- construction de la demande d'immatriculation
+	- construction du certificat de cession
+	- construction du bon de commande
+	
+	Qui sont des méthodes que possède notre monteur concret de liasse. On considère ici que la demande, le certificat et le bon de commande sont representés par des objets de type documents (nom, format) qui seront fourni par le client.
+	
+	Modélidation
+	.........
+	
+	
+3. Le système gère les commandes en fonction du contexte:
+	- les commandes assorties de crédit (commandesCredit)
+	- les commandes payée au comptant (commandesCash)
+	
+	En applicant la 2e méthode du patron Factory method, on a deux fabriques concrètes pour la création de ces types de commandes:
+	- une fabrique pour les commandesCredit et 
+	- une pour les commandesCash.
+	
+	on a la modélisation suivante:
+	
+	Modélidation
+	.........
+	
+	
+4. La liasse de document doit être unique lors de l'acquisition d'un véhicule. On modifie la classe "Liasse" de la question 2 pour la rendre finale, on ajoute une instance privée de liasse, on rend le constructeur par defaut privé et on définit une méthode de classe pour la recuperation de l'instance unique en cours d'utilisations.
+
+	Modélidation
+		.........
+		
+
+5. La modélisation de la question 2 nous montre qu'une liasse est constituée des documents qui sont des objets possédant un nom et un format. Et d'apres l'énoncé, ils peuvent étre soit au format pdf, soit au format Html. On décompose donc la conception de la classe "document" de la modélisation de la question 2 pour avoir une interface "Document" et des sous classes DocumentHtml et DocumentPdf. En supposant qu'on a un outils permettant de gerer les document pdf de manière générale, on met en place un adapteur a cet outil a l'aide du patron adapter pour gérer les documents pdf de notre système.
+
+	Modélidation
+		.........
+		
+		
+6. Le but est d'implanter les formulaire HTML a partir des widgets. On comprend donc qu'un formulaire est constitué par composition d'un ensemble de widgets, ceux pouvant varier/evoluer d'un formulaire a un autre. A l'aide du patron Bridge, on sépare donc le formulaire et ses widgets, de manière à ce que ceux puissent evoluer séparement.
+
+	Modélidation
+		.........
+		
+		
+7. Le système doit gérer les clients. Un client peut être soit une personne, soit une société (constitué d'un ensemble de clients). On peut donc ajouter, retirer, compter ou recupérer un client d'une société.
+
+	Modélidation
+		.........
+		
+		
+8. Avec le patron Observer, on définit le fait que un objet du domaine (véhicule) est considéré comme diffuseur et les clients comme les souscripteurs. Les clients peuvent donc souscrire à un véhicule et Pour tous les client qui auront souscrit a un véhicule, si jamais l'état du véhicule venait a changer (le prix peut changer, la couleur, le type de siège...), ceux ci seront notifier que l'état du véhicule a changer. On modifie donc la classe Client de la modélisation de la question 7 pour ajouter les méthode de souscription, desabonnement, notification et changement d'état. Et comme on peut avoir plusieurs type de client, on définit une interface Client que tous les client concrets vont implementer.
+
+Le patron décorator est utilsé pour donner dynamiquement la possibilité à un véhicule de pouvoir visualiser ses animations tels que tourner a gauche, tourner a droite, zoomer. on a donc un décorateur pour la visualisation des animations d'un véhicule.
+
+	Modélidation
+		.........
+		
+		
+9. On établie un algorithme de recherche en fonction de la marque, et de la couleur. A l'aide du patron itérator, on crée un iterateur pour le catalogue de véhicules et on utilise cet itérateur pour parcourir le catalogue et retourner les véhicules qui repondent aux critères de recherches.
+
+	Modélidation
+		.........
+		
+		
+10. Pour permettre le calcul des montants des commandes en fonction des pays de livraison, on définit le squelette de la methode de calcul d'une commande a l'aide du patron Template Method en se basant sur le calcul du montantTVA et en fonction du pays de livraison, on applique le Taux de TVA correspondant. en considérant le cameroun et la cote d'Ivoire, on a la modélisation suivante: 
+
+	Modélidation
+		.........

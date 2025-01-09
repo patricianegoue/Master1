@@ -1,0 +1,830 @@
+Terminaux inutilisés dans la grammaire
+
+    OPERATEUR
+    IDFONCTION
+    BOUCLE
+    COND
+    SEPVAR
+    SYMBOLE
+    TYPE
+    COMPARAISON
+    MOINS
+    DIVISER
+    EGALE
+
+
+État 1 conflits: 5 décalage/réduction
+État 9 conflits: 5 décalage/réduction, 1 réduction/réduction
+État 23 conflits: 3 décalage/réduction
+
+
+Grammaire
+
+    0 $accept: prog $end
+
+    1 prog: DEBUTPROGRAMME corps FINPROGRAMME
+
+    2 corps: expr corps
+    3      | expr
+
+    4 expr: binst
+    5     | binstsi
+    6     | blocBoucle
+
+    7 binst: inst SEPINSTR
+    8      | inst SEPINSTR binst
+
+    9 inst: ECRIRE VARIABLE
+   10     | LIRE VARIABLE
+   11     | VARIABLE AFFECTATION SECONDMEMBRE
+
+   12 SECONDMEMBRE: T
+   13             | SECONDMEMBRE PLUS T
+
+   14 T: TERME
+   15  | T FOIS TERME
+
+   16 TERME: VARIABLE
+   17      | NOMBRE
+
+   18 binstsi: SI CONDITION alo expr finsi
+   19        | SI CONDITION alo expr sino expr finsi
+
+   20 finsi: FSI
+
+   21 alo: ALORS
+
+   22 sino: SINON
+
+   23 blocBoucle: %empty
+   24           | TANTQUE etiqueBoucle exp_bool debutboucle blocIntBoucle finboucle
+
+   25 blocIntBoucle: binst
+   26              | binstsi
+   27              | binstsi blocIntBoucle
+   28              | binst blocIntBoucle
+
+   29 etiqueBoucle: %empty
+
+   30 debutboucle: FAIRE
+
+   31 exp_bool: CONDITION
+
+   32 finboucle: FAIT
+
+   33 CONDITION: %empty
+   34          | '(' TERME '=' TERME ')'
+   35          | '(' TERME '!' TERME ')'
+   36          | '(' TERME '<' TERME ')'
+   37          | '(' TERME '>' TERME ')'
+
+
+Terminaux, suivis des règles où ils apparaissent
+
+    $end (0) 0
+    '!' (33) 35
+    '(' (40) 34 35 36 37
+    ')' (41) 34 35 36 37
+    '<' (60) 36
+    '=' (61) 34
+    '>' (62) 37
+    error (256)
+    DEBUTPROGRAMME (258) 1
+    FINPROGRAMME (259) 1
+    NOMBRE (260) 17
+    OPERATEUR (261)
+    VARIABLE (262) 9 10 11 16
+    IDFONCTION (263)
+    TANTQUE (264) 24
+    FAIRE (265) 30
+    FAIT (266) 32
+    ALORS (267) 21
+    BOUCLE (268)
+    COND (269)
+    SEPVAR (270)
+    SEPINSTR (271) 7 8
+    SYMBOLE (272)
+    TYPE (273)
+    AFFECTATION (274) 11
+    SI (275) 18 19
+    FSI (276) 20
+    SINON (277) 22
+    COMPARAISON (278)
+    PLUS (279) 13
+    MOINS (280)
+    FOIS (281) 15
+    DIVISER (282)
+    EGALE (283)
+    LIRE (284) 10
+    ECRIRE (285) 9
+
+
+Non-terminaux, suivis des règles où ils apparaissent
+
+    $accept (37)
+        à gauche: 0
+    prog (38)
+        à gauche: 1
+        à droite: 0
+    corps (39)
+        à gauche: 2 3
+        à droite: 1 2
+    expr (40)
+        à gauche: 4 5 6
+        à droite: 2 3 18 19
+    binst (41)
+        à gauche: 7 8
+        à droite: 4 8 25 28
+    inst (42)
+        à gauche: 9 10 11
+        à droite: 7 8
+    SECONDMEMBRE (43)
+        à gauche: 12 13
+        à droite: 11 13
+    T (44)
+        à gauche: 14 15
+        à droite: 12 13 15
+    TERME (45)
+        à gauche: 16 17
+        à droite: 14 15 34 35 36 37
+    binstsi (46)
+        à gauche: 18 19
+        à droite: 5 26 27
+    finsi (47)
+        à gauche: 20
+        à droite: 18 19
+    alo (48)
+        à gauche: 21
+        à droite: 18 19
+    sino (49)
+        à gauche: 22
+        à droite: 19
+    blocBoucle (50)
+        à gauche: 23 24
+        à droite: 6
+    blocIntBoucle (51)
+        à gauche: 25 26 27 28
+        à droite: 24 27 28
+    etiqueBoucle (52)
+        à gauche: 29
+        à droite: 24
+    debutboucle (53)
+        à gauche: 30
+        à droite: 24
+    exp_bool (54)
+        à gauche: 31
+        à droite: 24
+    finboucle (55)
+        à gauche: 32
+        à droite: 24
+    CONDITION (56)
+        à gauche: 33 34 35 36 37
+        à droite: 18 19 31
+
+
+État 0
+
+    0 $accept: . prog $end
+
+    DEBUTPROGRAMME  décalage et aller à l'état 1
+
+    prog  aller à l'état 2
+
+
+État 1
+
+    1 prog: DEBUTPROGRAMME . corps FINPROGRAMME
+
+    VARIABLE  décalage et aller à l'état 3
+    TANTQUE   décalage et aller à l'état 4
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    VARIABLE  [réduction par utilisation de la règle 23 (blocBoucle)]
+    TANTQUE   [réduction par utilisation de la règle 23 (blocBoucle)]
+    SI        [réduction par utilisation de la règle 23 (blocBoucle)]
+    LIRE      [réduction par utilisation de la règle 23 (blocBoucle)]
+    ECRIRE    [réduction par utilisation de la règle 23 (blocBoucle)]
+    $défaut  réduction par utilisation de la règle 23 (blocBoucle)
+
+    corps       aller à l'état 8
+    expr        aller à l'état 9
+    binst       aller à l'état 10
+    inst        aller à l'état 11
+    binstsi     aller à l'état 12
+    blocBoucle  aller à l'état 13
+
+
+État 2
+
+    0 $accept: prog . $end
+
+    $end  décalage et aller à l'état 14
+
+
+État 3
+
+   11 inst: VARIABLE . AFFECTATION SECONDMEMBRE
+
+    AFFECTATION  décalage et aller à l'état 15
+
+
+État 4
+
+   24 blocBoucle: TANTQUE . etiqueBoucle exp_bool debutboucle blocIntBoucle finboucle
+
+    $défaut  réduction par utilisation de la règle 29 (etiqueBoucle)
+
+    etiqueBoucle  aller à l'état 16
+
+
+État 5
+
+   18 binstsi: SI . CONDITION alo expr finsi
+   19        | SI . CONDITION alo expr sino expr finsi
+
+    '('  décalage et aller à l'état 17
+
+    $défaut  réduction par utilisation de la règle 33 (CONDITION)
+
+    CONDITION  aller à l'état 18
+
+
+État 6
+
+   10 inst: LIRE . VARIABLE
+
+    VARIABLE  décalage et aller à l'état 19
+
+
+État 7
+
+    9 inst: ECRIRE . VARIABLE
+
+    VARIABLE  décalage et aller à l'état 20
+
+
+État 8
+
+    1 prog: DEBUTPROGRAMME corps . FINPROGRAMME
+
+    FINPROGRAMME  décalage et aller à l'état 21
+
+
+État 9
+
+    2 corps: expr . corps
+    3      | expr .
+
+    VARIABLE  décalage et aller à l'état 3
+    TANTQUE   décalage et aller à l'état 4
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    FINPROGRAMME  réduction par utilisation de la règle 3 (corps)
+    FINPROGRAMME  [réduction par utilisation de la règle 23 (blocBoucle)]
+    VARIABLE      [réduction par utilisation de la règle 23 (blocBoucle)]
+    TANTQUE       [réduction par utilisation de la règle 23 (blocBoucle)]
+    SI            [réduction par utilisation de la règle 23 (blocBoucle)]
+    LIRE          [réduction par utilisation de la règle 23 (blocBoucle)]
+    ECRIRE        [réduction par utilisation de la règle 23 (blocBoucle)]
+    $défaut      réduction par utilisation de la règle 3 (corps)
+
+    corps       aller à l'état 22
+    expr        aller à l'état 9
+    binst       aller à l'état 10
+    inst        aller à l'état 11
+    binstsi     aller à l'état 12
+    blocBoucle  aller à l'état 13
+
+
+État 10
+
+    4 expr: binst .
+
+    $défaut  réduction par utilisation de la règle 4 (expr)
+
+
+État 11
+
+    7 binst: inst . SEPINSTR
+    8      | inst . SEPINSTR binst
+
+    SEPINSTR  décalage et aller à l'état 23
+
+
+État 12
+
+    5 expr: binstsi .
+
+    $défaut  réduction par utilisation de la règle 5 (expr)
+
+
+État 13
+
+    6 expr: blocBoucle .
+
+    $défaut  réduction par utilisation de la règle 6 (expr)
+
+
+État 14
+
+    0 $accept: prog $end .
+
+    $défaut  accepter
+
+
+État 15
+
+   11 inst: VARIABLE AFFECTATION . SECONDMEMBRE
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    SECONDMEMBRE  aller à l'état 26
+    T             aller à l'état 27
+    TERME         aller à l'état 28
+
+
+État 16
+
+   24 blocBoucle: TANTQUE etiqueBoucle . exp_bool debutboucle blocIntBoucle finboucle
+
+    '('  décalage et aller à l'état 17
+
+    $défaut  réduction par utilisation de la règle 33 (CONDITION)
+
+    exp_bool   aller à l'état 29
+    CONDITION  aller à l'état 30
+
+
+État 17
+
+   34 CONDITION: '(' . TERME '=' TERME ')'
+   35          | '(' . TERME '!' TERME ')'
+   36          | '(' . TERME '<' TERME ')'
+   37          | '(' . TERME '>' TERME ')'
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    TERME  aller à l'état 31
+
+
+État 18
+
+   18 binstsi: SI CONDITION . alo expr finsi
+   19        | SI CONDITION . alo expr sino expr finsi
+
+    ALORS  décalage et aller à l'état 32
+
+    alo  aller à l'état 33
+
+
+État 19
+
+   10 inst: LIRE VARIABLE .
+
+    $défaut  réduction par utilisation de la règle 10 (inst)
+
+
+État 20
+
+    9 inst: ECRIRE VARIABLE .
+
+    $défaut  réduction par utilisation de la règle 9 (inst)
+
+
+État 21
+
+    1 prog: DEBUTPROGRAMME corps FINPROGRAMME .
+
+    $défaut  réduction par utilisation de la règle 1 (prog)
+
+
+État 22
+
+    2 corps: expr corps .
+
+    $défaut  réduction par utilisation de la règle 2 (corps)
+
+
+État 23
+
+    7 binst: inst SEPINSTR .
+    8      | inst SEPINSTR . binst
+
+    VARIABLE  décalage et aller à l'état 3
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    VARIABLE  [réduction par utilisation de la règle 7 (binst)]
+    LIRE      [réduction par utilisation de la règle 7 (binst)]
+    ECRIRE    [réduction par utilisation de la règle 7 (binst)]
+    $défaut  réduction par utilisation de la règle 7 (binst)
+
+    binst  aller à l'état 34
+    inst   aller à l'état 11
+
+
+État 24
+
+   17 TERME: NOMBRE .
+
+    $défaut  réduction par utilisation de la règle 17 (TERME)
+
+
+État 25
+
+   16 TERME: VARIABLE .
+
+    $défaut  réduction par utilisation de la règle 16 (TERME)
+
+
+État 26
+
+   11 inst: VARIABLE AFFECTATION SECONDMEMBRE .
+   13 SECONDMEMBRE: SECONDMEMBRE . PLUS T
+
+    PLUS  décalage et aller à l'état 35
+
+    $défaut  réduction par utilisation de la règle 11 (inst)
+
+
+État 27
+
+   12 SECONDMEMBRE: T .
+   15 T: T . FOIS TERME
+
+    FOIS  décalage et aller à l'état 36
+
+    $défaut  réduction par utilisation de la règle 12 (SECONDMEMBRE)
+
+
+État 28
+
+   14 T: TERME .
+
+    $défaut  réduction par utilisation de la règle 14 (T)
+
+
+État 29
+
+   24 blocBoucle: TANTQUE etiqueBoucle exp_bool . debutboucle blocIntBoucle finboucle
+
+    FAIRE  décalage et aller à l'état 37
+
+    debutboucle  aller à l'état 38
+
+
+État 30
+
+   31 exp_bool: CONDITION .
+
+    $défaut  réduction par utilisation de la règle 31 (exp_bool)
+
+
+État 31
+
+   34 CONDITION: '(' TERME . '=' TERME ')'
+   35          | '(' TERME . '!' TERME ')'
+   36          | '(' TERME . '<' TERME ')'
+   37          | '(' TERME . '>' TERME ')'
+
+    '='  décalage et aller à l'état 39
+    '!'  décalage et aller à l'état 40
+    '<'  décalage et aller à l'état 41
+    '>'  décalage et aller à l'état 42
+
+
+État 32
+
+   21 alo: ALORS .
+
+    $défaut  réduction par utilisation de la règle 21 (alo)
+
+
+État 33
+
+   18 binstsi: SI CONDITION alo . expr finsi
+   19        | SI CONDITION alo . expr sino expr finsi
+
+    VARIABLE  décalage et aller à l'état 3
+    TANTQUE   décalage et aller à l'état 4
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    $défaut  réduction par utilisation de la règle 23 (blocBoucle)
+
+    expr        aller à l'état 43
+    binst       aller à l'état 10
+    inst        aller à l'état 11
+    binstsi     aller à l'état 12
+    blocBoucle  aller à l'état 13
+
+
+État 34
+
+    8 binst: inst SEPINSTR binst .
+
+    $défaut  réduction par utilisation de la règle 8 (binst)
+
+
+État 35
+
+   13 SECONDMEMBRE: SECONDMEMBRE PLUS . T
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    T      aller à l'état 44
+    TERME  aller à l'état 28
+
+
+État 36
+
+   15 T: T FOIS . TERME
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    TERME  aller à l'état 45
+
+
+État 37
+
+   30 debutboucle: FAIRE .
+
+    $défaut  réduction par utilisation de la règle 30 (debutboucle)
+
+
+État 38
+
+   24 blocBoucle: TANTQUE etiqueBoucle exp_bool debutboucle . blocIntBoucle finboucle
+
+    VARIABLE  décalage et aller à l'état 3
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    binst          aller à l'état 46
+    inst           aller à l'état 11
+    binstsi        aller à l'état 47
+    blocIntBoucle  aller à l'état 48
+
+
+État 39
+
+   34 CONDITION: '(' TERME '=' . TERME ')'
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    TERME  aller à l'état 49
+
+
+État 40
+
+   35 CONDITION: '(' TERME '!' . TERME ')'
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    TERME  aller à l'état 50
+
+
+État 41
+
+   36 CONDITION: '(' TERME '<' . TERME ')'
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    TERME  aller à l'état 51
+
+
+État 42
+
+   37 CONDITION: '(' TERME '>' . TERME ')'
+
+    NOMBRE    décalage et aller à l'état 24
+    VARIABLE  décalage et aller à l'état 25
+
+    TERME  aller à l'état 52
+
+
+État 43
+
+   18 binstsi: SI CONDITION alo expr . finsi
+   19        | SI CONDITION alo expr . sino expr finsi
+
+    FSI    décalage et aller à l'état 53
+    SINON  décalage et aller à l'état 54
+
+    finsi  aller à l'état 55
+    sino   aller à l'état 56
+
+
+État 44
+
+   13 SECONDMEMBRE: SECONDMEMBRE PLUS T .
+   15 T: T . FOIS TERME
+
+    FOIS  décalage et aller à l'état 36
+
+    $défaut  réduction par utilisation de la règle 13 (SECONDMEMBRE)
+
+
+État 45
+
+   15 T: T FOIS TERME .
+
+    $défaut  réduction par utilisation de la règle 15 (T)
+
+
+État 46
+
+   25 blocIntBoucle: binst .
+   28              | binst . blocIntBoucle
+
+    VARIABLE  décalage et aller à l'état 3
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    $défaut  réduction par utilisation de la règle 25 (blocIntBoucle)
+
+    binst          aller à l'état 46
+    inst           aller à l'état 11
+    binstsi        aller à l'état 47
+    blocIntBoucle  aller à l'état 57
+
+
+État 47
+
+   26 blocIntBoucle: binstsi .
+   27              | binstsi . blocIntBoucle
+
+    VARIABLE  décalage et aller à l'état 3
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    $défaut  réduction par utilisation de la règle 26 (blocIntBoucle)
+
+    binst          aller à l'état 46
+    inst           aller à l'état 11
+    binstsi        aller à l'état 47
+    blocIntBoucle  aller à l'état 58
+
+
+État 48
+
+   24 blocBoucle: TANTQUE etiqueBoucle exp_bool debutboucle blocIntBoucle . finboucle
+
+    FAIT  décalage et aller à l'état 59
+
+    finboucle  aller à l'état 60
+
+
+État 49
+
+   34 CONDITION: '(' TERME '=' TERME . ')'
+
+    ')'  décalage et aller à l'état 61
+
+
+État 50
+
+   35 CONDITION: '(' TERME '!' TERME . ')'
+
+    ')'  décalage et aller à l'état 62
+
+
+État 51
+
+   36 CONDITION: '(' TERME '<' TERME . ')'
+
+    ')'  décalage et aller à l'état 63
+
+
+État 52
+
+   37 CONDITION: '(' TERME '>' TERME . ')'
+
+    ')'  décalage et aller à l'état 64
+
+
+État 53
+
+   20 finsi: FSI .
+
+    $défaut  réduction par utilisation de la règle 20 (finsi)
+
+
+État 54
+
+   22 sino: SINON .
+
+    $défaut  réduction par utilisation de la règle 22 (sino)
+
+
+État 55
+
+   18 binstsi: SI CONDITION alo expr finsi .
+
+    $défaut  réduction par utilisation de la règle 18 (binstsi)
+
+
+État 56
+
+   19 binstsi: SI CONDITION alo expr sino . expr finsi
+
+    VARIABLE  décalage et aller à l'état 3
+    TANTQUE   décalage et aller à l'état 4
+    SI        décalage et aller à l'état 5
+    LIRE      décalage et aller à l'état 6
+    ECRIRE    décalage et aller à l'état 7
+
+    $défaut  réduction par utilisation de la règle 23 (blocBoucle)
+
+    expr        aller à l'état 65
+    binst       aller à l'état 10
+    inst        aller à l'état 11
+    binstsi     aller à l'état 12
+    blocBoucle  aller à l'état 13
+
+
+État 57
+
+   28 blocIntBoucle: binst blocIntBoucle .
+
+    $défaut  réduction par utilisation de la règle 28 (blocIntBoucle)
+
+
+État 58
+
+   27 blocIntBoucle: binstsi blocIntBoucle .
+
+    $défaut  réduction par utilisation de la règle 27 (blocIntBoucle)
+
+
+État 59
+
+   32 finboucle: FAIT .
+
+    $défaut  réduction par utilisation de la règle 32 (finboucle)
+
+
+État 60
+
+   24 blocBoucle: TANTQUE etiqueBoucle exp_bool debutboucle blocIntBoucle finboucle .
+
+    $défaut  réduction par utilisation de la règle 24 (blocBoucle)
+
+
+État 61
+
+   34 CONDITION: '(' TERME '=' TERME ')' .
+
+    $défaut  réduction par utilisation de la règle 34 (CONDITION)
+
+
+État 62
+
+   35 CONDITION: '(' TERME '!' TERME ')' .
+
+    $défaut  réduction par utilisation de la règle 35 (CONDITION)
+
+
+État 63
+
+   36 CONDITION: '(' TERME '<' TERME ')' .
+
+    $défaut  réduction par utilisation de la règle 36 (CONDITION)
+
+
+État 64
+
+   37 CONDITION: '(' TERME '>' TERME ')' .
+
+    $défaut  réduction par utilisation de la règle 37 (CONDITION)
+
+
+État 65
+
+   19 binstsi: SI CONDITION alo expr sino expr . finsi
+
+    FSI  décalage et aller à l'état 53
+
+    finsi  aller à l'état 66
+
+
+État 66
+
+   19 binstsi: SI CONDITION alo expr sino expr finsi .
+
+    $défaut  réduction par utilisation de la règle 19 (binstsi)

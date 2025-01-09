@@ -1,0 +1,893 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Enseigne -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Enseigne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#is_student_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#is_student_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_a_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_a_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_a_name2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_a_name2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_age2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#has_age2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#personne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Iphone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Iphone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M.Jean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M.Jean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patrick"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-mtn"/>
+        <untitled-ontology-2:has_a_name2>Jean-pierre koume</untitled-ontology-2:has_a_name2>
+        <untitled-ontology-2:has_age2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</untitled-ontology-2:has_age2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Niveau"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Parafine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Parafine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#samsung"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L1"/>
+        <untitled-ontology-2:has_a_name>Parafine kegne</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patrice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#techno"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L2"/>
+        <untitled-ontology-2:has_a_name>Patrice mafoundji</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patricia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patricia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#smartphone"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M1"/>
+        <untitled-ontology-2:has_a_name>Patricia NEGOUE</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patrick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patrick">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Iphone"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L3"/>
+        <untitled-ontology-2:has_a_name>Patrick konguep</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#huawei"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M2"/>
+        <untitled-ontology-2:has_a_name>Paul mafoka</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Pauline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Pauline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#black-burry"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M4"/>
+        <untitled-ontology-2:has_a_name>Pauline tagne</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Pedro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Pedro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#infinix"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D1"/>
+        <untitled-ontology-2:has_a_name>pedro sonfack</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Perla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Perla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-orange"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D3"/>
+        <untitled-ontology-2:has_a_name>Perla de-la-croix</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Purin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Purin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D4"/>
+        <untitled-ontology-2:has_a_name>Purin atemengue</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#alain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#alain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#ari"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#infinix"/>
+        <untitled-ontology-2:has_a_name>alain mbog</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#ana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#ana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patricia"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#huawei"/>
+        <untitled-ontology-2:has_a_name>ana danmark</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#ari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#ari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone8"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M1"/>
+        <untitled-ontology-2:has_a_name>ari buari</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#arielle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#arielle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Perla"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#techno"/>
+        <untitled-ontology-2:has_a_name>Arielle kana</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#axel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#axel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M1"/>
+        <untitled-ontology-2:has_a_name>axel nji</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#bernadette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#bernadette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Purin"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#infinix"/>
+        <untitled-ontology-2:has_a_name>bernadette delrose</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#black-burry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#black-burry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#brayanne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#brayanne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#perene"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#itel"/>
+        <untitled-ontology-2:has_a_name>brayanne delmond</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#brindy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#brindy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone13"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L2"/>
+        <untitled-ontology-2:has_a_name>brindy illary</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#cameron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#cameron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#flora"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone12"/>
+        <untitled-ontology-2:has_a_name>cameron boyce</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#david -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#david">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#delphine"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#black-burry"/>
+        <untitled-ontology-2:has_a_name>david konguep</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#delphine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#delphine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone8"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M1"/>
+        <untitled-ontology-2:has_a_name>flora tokam</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#felix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#felix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Paul"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#black-burry"/>
+        <untitled-ontology-2:has_a_name>felix domgne</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#flora -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#flora">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone6"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A1"/>
+        <untitled-ontology-2:has_a_name>flora tokam</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#georges -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#georges">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#brindy"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphonex"/>
+        <untitled-ontology-2:has_a_name>georges mpehe</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#gerald -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#gerald">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Pedro"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Iphone"/>
+        <untitled-ontology-2:has_a_name>gerald gordon</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#goldberg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#goldberg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patrice"/>
+        <untitled-ontology-2:has_a_name>goldberg joseph</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#huawei -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#huawei">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#infinix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#infinix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphonex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphonex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#itel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#itel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#axel"/>
+        <untitled-ontology-2:has_a_name>jack ambrose</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jeannette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jeannette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Parafine"/>
+        <untitled-ontology-2:has_a_name>jeanette la belle</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Pauline"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-orange"/>
+        <untitled-ontology-2:has_a_name>jena lokovaski</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jonathan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#jonathan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Perla"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone6"/>
+        <untitled-ontology-2:has_a_name>jonathan moore</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#joseph -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#joseph">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#ari"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone7"/>
+        <untitled-ontology-2:has_a_name>joseph evina</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#kevin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#kevin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Patricia"/>
+        <untitled-ontology-2:has_a_name>kevin soap</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#maka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#maka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#infinix"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#M2"/>
+        <untitled-ontology-2:has_a_name>maka armance</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#merveille -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#merveille">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone6"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L3"/>
+        <untitled-ontology-2:has_a_name>merveille lambo</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#murielle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#murielle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone11"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#L3"/>
+        <untitled-ontology-2:has_a_name>murielle sandra</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-mtn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-mtn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-orange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pack-orange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#pat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#flora"/>
+        <untitled-ontology-2:has_a_name>pat franck</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#perene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#perene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#itel"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#D2"/>
+        <untitled-ontology-2:has_a_name>perene magne</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#samsung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#samsung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#smartphone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#smartphone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#stephane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#stephane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Professeur"/>
+        <untitled-ontology-2:Enseigne rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#brindy"/>
+        <untitled-ontology-2:has_a_name>stephane abou</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#techno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#techno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#victor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#victor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphone14"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A5"/>
+        <untitled-ontology-2:has_a_name>victor magellan</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#yvie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#yvie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#Etudiant"/>
+        <untitled-ontology-2:has_a rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#iphonex"/>
+        <untitled-ontology-2:is_student_of rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/2/untitled-ontology-2#A2"/>
+        <untitled-ontology-2:has_a_name>yvie azi</untitled-ontology-2:has_a_name>
+        <untitled-ontology-2:has_age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</untitled-ontology-2:has_age>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,25 @@
+/*
+ * listeChaine.h
+ *
+ *  Created on: Dec 28, 2012
+ *      Author: messi
+ */
+
+#ifndef LISTECHAINE_H_
+#define LISTECHAINE_H
+
+struct Noeud{
+	int info;
+	struct Noeud * suivant;
+};
+typedef struct Noeud Noeud;
+
+Noeud* nouveau(int val);
+void insert_tete(Noeud* liste, int val);
+void affiche(Noeud * liste);
+
+
+
+
+
+#endif /* LISTECHAINE_H_ */

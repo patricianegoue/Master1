@@ -1,0 +1,12 @@
+ewondo:
+ A recoit 0;
+ lire B;
+ lire C;
+ tantque(A<C)
+ faire
+   A recoit A plus B;
+   si(A!=2) alors
+     ecrire A;
+   fsi
+ fait
+ :ewondo

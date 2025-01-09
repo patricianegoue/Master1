@@ -1,0 +1,27 @@
+/*
+ * main.c
+ *
+ *  Created on: Dec 30, 2012
+ *      Author: messi
+ */
+
+#include "listeChaine.h"
+
+int main(int argc, char **argv)
+{
+
+	Noeud * l = nouveau(1);
+	insert_tete(&l,2);
+	affiche(l);
+	supprime_tete(&l);
+	affiche(l);
+	insert_queue(&l,2);
+	insert_queue(&l,3);
+	insert_queue(&l,1);
+	affiche(l);
+	return 0;
+}
+
+
+
+

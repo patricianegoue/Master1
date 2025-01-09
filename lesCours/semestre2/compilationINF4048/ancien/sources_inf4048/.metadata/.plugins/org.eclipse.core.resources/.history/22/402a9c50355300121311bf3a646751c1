@@ -1,0 +1,30 @@
+/*
+ * main.c
+ *
+ *  Created on: Dec 30, 2012
+ *      Author: messi
+ */
+
+#include "utilitaire.h"
+#include "stdio.h"
+
+int main(int argc, char **argv)
+{
+    Pile p;
+	init_pile_vide(&p);
+	printf("La taille de la pile est: %d\n",p.taille);
+	empiler(&p,1);
+	printf("La taille de la pile est: %d\n",p.taille);
+	affiche(p.liste);
+	empiler(&p,2);
+	printf("La taille de la pile est: %d\n",p.taille);
+	affiche(p.liste);
+	empiler(&p,3);
+	printf("La taille de la pile est: %d\n",p.taille);
+	affiche(p.liste);
+	return 0;
+}
+
+
+
+

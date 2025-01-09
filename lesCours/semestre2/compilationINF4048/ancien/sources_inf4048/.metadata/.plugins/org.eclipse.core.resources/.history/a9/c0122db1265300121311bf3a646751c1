@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: Dec 30, 2012
+ *      Author: messi
+ */
+
+#include "listeChaine.h"
+#include "stdio.h"
+
+int main(int argc, char **argv)
+{
+
+	Noeud * l = nouveau(1);
+	insert_tete(&l,2);
+	insert_tete(&l,3);
+	insert_tete(&l,4);
+	affiche(l);
+	insert_queue(&l,5);
+	affiche(l);
+	int val = fin_de_liste(l), val = tete_de_liste(l);
+	printf("La fin de liste est: %d",val);
+	affiche(l);
+	return 0;
+}
+
+
+
+

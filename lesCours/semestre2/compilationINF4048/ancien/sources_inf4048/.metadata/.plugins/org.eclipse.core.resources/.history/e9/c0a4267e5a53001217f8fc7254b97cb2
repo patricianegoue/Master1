@@ -1,0 +1,7 @@
+all:exo7
+
+flex -o exo7.lex.yy.c exo7.lex
+gcc -pedantic -Wall -O2 exo7.lex.yy.c -o exo7 -lfl
+:utilitaire.c main.c
+	gcc utilitaire.c main.c -o main
+

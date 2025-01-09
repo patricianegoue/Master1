@@ -1,0 +1,2 @@
+exo4:exo4.c
+	gcc -o exo4.c exo4

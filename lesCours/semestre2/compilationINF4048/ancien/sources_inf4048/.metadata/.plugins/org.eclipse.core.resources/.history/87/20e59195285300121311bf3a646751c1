@@ -1,0 +1,2 @@
+main:listeChaine.c main.c
+	gcc listeChaine.c main.c -o main

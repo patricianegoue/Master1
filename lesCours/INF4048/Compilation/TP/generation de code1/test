@@ -1,0 +1,6 @@
+ewondo:
+A nuan 10;
+B nuan 3;
+C nuan A modulo B;
+atili C;
+:ewondo

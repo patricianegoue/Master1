@@ -1,0 +1,73 @@
+/*
+ * exo4.c
+ *
+ *  Created on: Dec 23, 2012
+ *      Author: messi
+ */
+
+#include <stdio.h>
+
+#define etat_initial 0
+#define etat_nombre 1
+#define etat_operateur 2
+#define etat_final 3
+
+typedef int Etat;
+
+void afficher(char* type, char* valeur, Etat ){
+	printf("<%s:%s>",type,valeur);
+}
+
+int main(int argc, char** argv)
+{
+
+int nbOc = 0, i = 0, j = 0, state = -1, nbr=0,nbr1;
+int init = 0;
+Etat q = etat_initial, q_precedent = etat_initial;
+
+FILE* fdw = fopen(argv[1],"r");
+char car,tmp;
+
+
+while(!feof(fdw)){
+	fread(&car,1,1,fdw);
+
+	switch(car)
+	{
+	   	case '0':
+	   	case '1':
+	   	case '2':
+	   	case '3':
+	   	case '4':
+	   	case '5':
+	   	case '6':
+	   	case '7':
+	   	case '8':
+	   	case '9':
+	   			  q_precedent = q;
+	   			  q = etat_nombre;
+	              nbr = nbr*10 + (car-'0');
+                  break;
+
+	   	case '+':
+
+	   	case '*':
+	   			q_precedent = q;
+				q = etat_operateur;
+			    break;
+
+		default:
+			printf("\n%c : Parse Error",car);
+			return 0;
+	}
+	if(state==1)
+		printf("<int:%d>",nbr1);
+}
+
+fclose(fdw);
+
+
+return 0;
+}
+
+

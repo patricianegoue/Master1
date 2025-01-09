@@ -1,0 +1,16 @@
+/*
+ * pile.h
+ *
+ *  Created on: Dec 29, 2012
+ *      Author: messi
+ */
+
+#ifndef PILE_H_
+#define PILE_H_
+
+struct Pile{
+
+};
+
+
+#endif /* PILE_H_ */

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Course a rdfs:Class .
+:Lecture a rdfs:Class ;
+    rdfs:subClassOf :Course .
+:Seminar a rdfs:Class ;
+    rdfs:subClassOf :Course .
+:Person a rdfs:Class .
+:Staff a rdfs:Class ;
+    rdfs:subClassOf :Person .
+:Researcher a rdfs:Class ;
+    rdfs:subClassOf :Staff .
+:Doctor a rdfs:Class ;
+    rdfs:subClassOf :Staff .
+:isManagedBy a rdf:Property ;
+    rdfs:domain :Course ;
+    rdfs:range :Staff .
+
+:SemanticWebApplications a :Lecture .
+:AzanziJiomekong a :Researcher .
+:SemanticWebApplications :isManagedBy :AzanziJiomekong .

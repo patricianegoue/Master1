@@ -1,0 +1,17 @@
+deb http://apt.kubernetes.io/ kubernetes-xenial main
+
+apiVersion: v1
+kind: Config
+
+clusters:
+- cluster:
+    localhost:8080 : http://proxy.example.org:3128
+    localhost:8080 : https://k8s.example.org/k8s/clusters/c-xxyyzz
+  name: development
+
+users:
+- name: developer
+
+contexts:
+- context:
+  name: development

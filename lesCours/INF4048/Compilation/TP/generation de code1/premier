@@ -1,0 +1,22 @@
+ewondo:
+alan A;
+B nuan 2;
+
+unte(B muangue A) abo
+    E nuan A modulo C;
+    ngue (E ane 0) nde
+        D nuan D anal 1;
+    memanengue
+    C nuan C anal 1;
+amanibo
+
+ngue (D ane 0) nde
+     A nuan 1;
+     atili A;
+memanengue
+
+ngue (D assigui 0) nde
+     A nuan 0;
+     atili A;
+memanengue
+:ewondo

@@ -1,0 +1,875 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9/"
+     xml:base="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Alimentation-ontology-9="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_food_component -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_food_component">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_food_ingredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_food_ingredient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#is_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#is_from">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_a_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_a_name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_calories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_calories"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_image -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#has_image"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Place"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Akoume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Akoume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mais"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>akoume</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>20 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/akoume.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#ademe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#ademe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mais"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson"/>
+        <Alimentation-ontology-9:has_a_name>ademe</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>50 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Ademe.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#arrachide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#arrachide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#attieke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#attieke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#legumes"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#manioc"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>attieke</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>30 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/attieke.jpeg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#bakbana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#bakbana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#banane"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#haricot"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#huile_de_palme"/>
+        <Alimentation-ontology-9:has_a_name>bakbana</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>30 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Bakbana%20.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#banane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#banane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#bangui -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#bangui">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#banane"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_a_name>bangui</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>45 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/bangui.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#boulettes_de_manioc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#boulettes_de_manioc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#manioc"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_a_name>boulettes manioc</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>35 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Boulettes%20de%20manioc%20avif</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#cboma_dessi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#cboma_dessi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gombo"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#huile_de_palme"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#viande"/>
+        <Alimentation-ontology-9:has_a_name>gboma dessi</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>29 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Gboma%20Dessi%20.png</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#degue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#degue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lait"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mais"/>
+        <Alimentation-ontology-9:has_a_name>degue</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>46 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/degue.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#djenkoume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#djenkoume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>djenkoume</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>10 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/djenkoume.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#epices -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#epices">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#frites_de_patates_douces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#frites_de_patates_douces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#patate"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#hule_d&apos;olive"/>
+        <Alimentation-ontology-9:has_a_name>frites patates douces</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>60 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Frites%20de%20patates%20douces.jpeg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fufu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fufu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#manioc"/>
+        <Alimentation-ontology-9:has_a_name>fufu</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>70 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Fufu.jpeg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#garba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#garba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mais"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#viande"/>
+        <Alimentation-ontology-9:has_a_name>garba</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>36 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Garba%20.jpeg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#legumes"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#manioc"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson"/>
+        <Alimentation-ontology-9:has_a_name>gari</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>50 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Gari.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gombo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gombo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gombo_saute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gombo_saute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#gombo"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>gombo saute</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>30 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Gombo%20saut%C3%A9.jpeg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#haricot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#haricot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#huile_de_palme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#huile_de_palme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#kuli_kuli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#kuli_kuli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#arrachide"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_a_name>kuli kuli</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>40 kacl</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Kuli%20Kuli.avif</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lait -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lait">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#legumes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#legumes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mais -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#manioc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#manioc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mineraux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#mineraux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#patate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#patate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-ademe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-ademe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-akoume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-akoume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-attieke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-attieke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-bakbana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-bakbana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-bangui -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-bangui">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-boulettes_manioc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-boulettes_manioc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-degue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-degue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-djenkoume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-djenkoume">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-frite_patates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-frite_patates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-fufu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-fufu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-garba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-garba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-gari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-gari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-gboma_dessi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-gboma_dessi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-gombo_saute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-gombo_saute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-kulikuli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-kulikuli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-riz_gras -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-riz_gras">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-riz_sauce_arrachide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-riz_sauce_arrachide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-sagamite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-sagamite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-sauce_adossi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-sauce_adossi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-soupe_de_poisson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#plat-de-soupe_de_poisson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Dish"/>
+        <Alimentation-ontology-9:is_from rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz_gras -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz_gras">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz"/>
+        <Alimentation-ontology-9:has_a_name>riz gras</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>19 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Riz%20gras.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz_sauce_arrachide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#riz_sauce_arrachide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#arrachide"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>riz sauce arrachide</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>59 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Riz%20sauce%20d_arachide.jpeg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sagamite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sagamite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#fibres_alimentaires"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#legumes"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sorgho"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#viande"/>
+        <Alimentation-ontology-9:has_a_name>sagamite</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>28 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/sagamite.webp</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sauce_adossi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sauce_adossi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#glucides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>sauce adossi</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>25 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Sauce%20adossi.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sorgho -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#sorgho">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#soupe_de_poisson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#soupe_de_poisson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Food"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#eau"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#lipides"/>
+        <Alimentation-ontology-9:has_food_component rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#proteines"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#legumes"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#oignon"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#piments"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#poisson"/>
+        <Alimentation-ontology-9:has_food_ingredient rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate"/>
+        <Alimentation-ontology-9:has_a_name>soupe poisson</Alimentation-ontology-9:has_a_name>
+        <Alimentation-ontology-9:has_calories>47 kcal</Alimentation-ontology-9:has_calories>
+        <Alimentation-ontology-9:has_image>https://raw.githubusercontent.com/jiofidelus/tsotsa/main/TSOTSAImg_dataset/Togo/Soupe%20de%20poisson.jpg</Alimentation-ontology-9:has_image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#togo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#tomate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#viande -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#viande">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#vitamines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#hule_d&apos;olive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#hule_d&apos;olive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/patricia/ontologies/2024/3/Alimentation-ontology-9#FoodIngredient"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

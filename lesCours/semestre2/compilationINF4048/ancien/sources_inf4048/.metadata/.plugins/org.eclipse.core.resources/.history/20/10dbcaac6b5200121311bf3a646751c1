@@ -1,0 +1,19 @@
+/*
+ * listeChaine.h
+ *
+ *  Created on: Dec 28, 2012
+ *      Author: messi
+ */
+
+#ifndef LISTECHAINE_H_
+#define LISTECHAINE_H
+
+struct noeud{
+	int info;
+	struct noeud * suivant;
+};
+
+
+
+
+#endif /* LISTECHAINE_H_ */

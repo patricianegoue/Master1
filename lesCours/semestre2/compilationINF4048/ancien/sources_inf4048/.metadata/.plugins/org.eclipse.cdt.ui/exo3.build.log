@@ -1,0 +1,13 @@
+17:21:13 **** Incremental Build of configuration Debug for project exo3 ****
+make all 
+Building target: exo3
+Invoking: GCC C Linker
+gcc  -o "exo3"  ./src/exo3-1.o ./src/exo3-2.o   
+./src/exo3-2.o: In function `main':
+/home/messi/Desktop/tpSeminaire/rapportSeminaire/tp1/exo3/Debug/../src/exo3-2.c:19: multiple definition of `main'
+./src/exo3-1.o:/home/messi/Desktop/tpSeminaire/rapportSeminaire/tp1/exo3/Debug/../src/exo3-1.c:20: first defined here
+collect2: ld returned 1 exit status
+make: *** [exo3] Error 1
+
+17:21:13 Build Finished (took 110ms)
+

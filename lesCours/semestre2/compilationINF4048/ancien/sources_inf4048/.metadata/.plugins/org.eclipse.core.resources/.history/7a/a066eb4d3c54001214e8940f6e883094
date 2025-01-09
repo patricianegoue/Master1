@@ -1,0 +1,4 @@
+exo8:exo7.c utilitaire.c 
+	gcc utilitaire.c exo7.c -o exo7
+
+

@@ -1,0 +1,132 @@
+/*
+ * exo8.c
+ *
+ *  Created on: Jan 1, 2013
+ *      Author: messi
+ */
+
+#include <stdio.h>
+#include "utilitaire.h"
+
+#define etat_initial 0
+#define etat_nombre 1
+#define etat_operateur 2
+#define etat_final 3
+
+typedef int Etat;
+char*yytext;
+Noeud * exp_arith;
+
+void afficher(int valeur, Etat q_courant){
+	if(q_courant == etat_nombre)
+		printf("<int:%d>",valeur);
+	if(q_courant == etat_operateur)
+		printf("<oper:%c>",valeur);
+	insert_queue(&exp_arith, valeur);
+}
+
+int est_operateur(int car){
+	int bool = 0;
+	if(car=='+'||car=='*')
+		bool = 1;
+	return bool;
+}
+File exp_post_fixe_sans_prio(Noeud* exp, File* sortie)
+{
+	Pile p; Noeud*l = exp;
+	int val;
+	init_file_vide(sortie);
+	init_pile_vide(&p);
+
+	while(exp!=0){
+       if(!est_operateur(exp->info))
+       {
+    	   enfiler(sortie, exp->info);
+       }
+       else
+       {
+    	   if(!pile_est_vide(p))
+    	   {
+    		   val = depiler(&p);
+    	   }
+       }
+       exp = exp->suivant;
+	}
+}
+int evaluation_gauche_droite(fdw)
+{
+
+}
+
+int analyse_lexicale(FILE* fdw)
+{
+	int nbOc = 0, i = 0, j = 0, state = -1, nbr=0,nbr1;
+	int init = 0;
+	Etat q = etat_initial, q_precedent = etat_initial;
+
+
+	char car,tmp;
+	printf("\n");
+
+	while(!feof(fdw)){
+		fread(&car,1,1,fdw);
+
+		switch(car)
+		{
+		   	case '0':
+		   	case '1':
+		   	case '2':
+		   	case '3':
+		   	case '4':
+		   	case '5':
+		   	case '6':
+		   	case '7':
+		   	case '8':
+		   	case '9':
+		   			  q = etat_nombre;
+		              nbr = nbr*10 + (car-'0');
+	                  break;
+
+		   	case '+':
+
+		   	case '*':
+
+					if(q==etat_nombre){
+						afficher(nbr,q);
+						nbr = 0;
+					}
+
+					q = etat_operateur;
+					afficher(car,q);
+				    break;
+		   	case '\n':
+		   				break;
+
+			default:
+				printf("\n%c : Parse Error, unkown char\n",car);
+				return 1;
+		}
+	}
+	fclose(fdw);
+
+	if(q==etat_nombre)
+		afficher(nbr,q);
+	printf("\n\n");
+	return 0;
+}
+
+int main(int argc, char** argv)
+{
+FILE* fdw = fopen(argv[1],"r");
+int val_anal = analyse_lexicale(fdw);
+
+/*if(val_anal == 0)*/
+
+
+return 0;
+}
+
+
+
+
+
